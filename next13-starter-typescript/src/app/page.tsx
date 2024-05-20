@@ -2,8 +2,19 @@
 import Link from "next/link";
 import style from "@/style/app.module.css";
 import TableList from "@/components/Table";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const res = async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      return await response.json();
+    };
+    res();
+  }, []);
+
   return (
     <main>
       <ul>
