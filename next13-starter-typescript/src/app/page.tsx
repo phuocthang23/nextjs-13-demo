@@ -7,9 +7,7 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     const res = async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
+      const response = await fetch("http://localhost:8000/blogs");
       return await response.json();
     };
     res();
