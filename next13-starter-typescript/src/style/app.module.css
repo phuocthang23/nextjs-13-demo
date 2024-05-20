@@ -1,0 +1,15 @@
+.red {
+  color: red;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.green {
+  color: green;
+  border: 1px solid green;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
