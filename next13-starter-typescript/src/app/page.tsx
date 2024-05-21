@@ -1,22 +1,12 @@
 "use client";
 import Link from "next/link";
-import style from "@/style/app.module.css";
-import TableList from "@/components/Table";
-import { useEffect } from "react";
-
 export default function Home() {
-  useEffect(() => {
-    const res = async () => {
-      const response = await fetch("http://localhost:8000/blogs");
-      return await response.json();
-    };
-    res();
-  }, []);
+  //sử dụng swr để fetching data
 
   return (
     <main>
       <ul>
-        <li className={style["red"]}>
+        <li>
           <Link href="/facebook">FaceBook</Link>
         </li>
         <li>
@@ -26,7 +16,6 @@ export default function Home() {
           <Link href="/tiktok">Tiktok</Link>
         </li>
       </ul>
-      <TableList />
     </main>
   );
 }

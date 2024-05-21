@@ -2,7 +2,6 @@ import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavBar() {
   return (
@@ -12,14 +11,8 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link href="/facebook" className="nav-link">
-              FaceBook
-            </Link>
-            <Link href="/twitter" className="nav-link">
-              Youtube
-            </Link>
-            <Link href="/tiktok" className="nav-link">
-              Tiktok
+            <Link href="/blogs" className="nav-link">
+              Blogs
             </Link>
           </Nav>
         </Navbar.Collapse>
