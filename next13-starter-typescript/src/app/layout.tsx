@@ -21,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        <Container suppressHydrationWarning={true}>{children}</Container>
+        <Container style={{ minHeight: "calc(100vh - 120px)" }}>
+          {children}
+        </Container>
+
         <Footer />
       </body>
     </html>

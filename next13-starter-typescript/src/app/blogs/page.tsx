@@ -16,11 +16,13 @@ const defauBlogPage = () => {
     }
   );
 
+  const blogsData = Array.isArray(data) ? [...data].reverse() : [];
+
   if (error) return "An error has occurred.";
   if (isLoading) return "Loading...";
   return (
     <div>
-      <TableList blogs={[...data].reverse() ?? []} />
+      <TableList blogs={blogsData} />
     </div>
   );
 };
